@@ -1,0 +1,7 @@
+config {
+  type: "declaration",
+  database: "du-data-490720",
+  schema: "du_operational",
+  name: "du_university_chapters",
+  description: "Raw landing table from Python ingestion"
+}

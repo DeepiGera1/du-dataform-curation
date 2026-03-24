@@ -1,0 +1,7 @@
+{
+  "defaultSchema": "du_stage",
+  "assertionSchema": "du_assertions",
+  "warehouse": "bigquery",
+  "defaultDatabase": "du-data-490720",
+  "defaultLocation": "europe-west2"
+}

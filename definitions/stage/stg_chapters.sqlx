@@ -1,0 +1,18 @@
+config {
+  type: "view",
+  schema: "du_stage",
+  name: "stage_chapters",
+  description: "Standardizes field names and casts data types."
+}
+
+SELECT
+  SAFE_CAST(OBJECT_ID AS INT64) AS object_id,
+  TRIM(Chapter_ID) AS chapter_id,
+  TRIM(Chapter_name) AS chapter_name,
+  TRIM(City) AS city,
+  TRIM(State) AS state,
+  SAFE_CAST(longitude AS FLOAT64) AS longitude,
+  SAFE_CAST(latitude AS FLOAT64) AS latitude,
+  ingestion_time
+FROM
+  ${ref("du_university_chapters")}

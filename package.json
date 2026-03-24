@@ -1,0 +1,6 @@
+{
+  "name": "du-university-curation",
+  "dependencies": {
+    "@dataform/core": "2.9.0"
+  }
+}

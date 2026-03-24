@@ -1,0 +1,18 @@
+config {
+  type: "table",
+  schema: "du_user",
+  name: "university_chapters",
+  description: "Final curated university chapters with contact information."
+}
+
+SELECT
+  chapter_id,
+  chapter_name,
+  city,
+  state,
+  -- Create Geography object for mapping
+  ST_GEOGPOINT(longitude, latitude) AS spatial_point,
+  ingestion_time,
+  CURRENT_TIMESTAMP() AS curated_at
+FROM
+  ${ref("stage_chapters")}
